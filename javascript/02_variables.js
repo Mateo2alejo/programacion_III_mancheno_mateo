@@ -1,0 +1,24 @@
+console.log("Hello, desde Cosola!");
+console.log("Declaración de variables!");
+let acompanante = "Morty";
+let energia = 100;
+let dimension = "C-137";
+let tieneCOmbustible = true;
+console.log(acompanante);
+console.log(energia);
+console.log(dimension);
+console.log(tieneCOmbustible); 
+acompanante = "Rick";
+energia= 150;
+dimension = "C140";
+tieneCOmbustible = false;
+console.log(acompanante);
+console.log(energia);
+console.log(dimension);
+console.log(tieneCOmbustible);
+
+var personaje = "Jerry";
+console.log("Personaje: " ,personaje);
+personaje = "Rick";
+console.log("NuevoPersonaje: ",personaje);
+var personaje ="Jerry";
