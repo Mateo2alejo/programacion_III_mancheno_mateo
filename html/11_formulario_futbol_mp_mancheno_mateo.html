@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <title>Registro de operaciones</title>
+    <title>Registro de estadísticas de fútbol</title>
 </head>
 <body>
     <header>
-        <h1>Centro de Gestión de Transporte Público</h1>
-        <p>Registro de operaciones de la flota</p>
+        <h1>Centro de Estadísticas de Fútbol</h1>
+        <p>Registro de partidos y rendimiento por jornada</p>
     </header>
     <hr>
     <main>
@@ -17,48 +17,48 @@
               method="get"
               id="registro-misiones">
             <fieldset>
-                <legend>Información de la ruta</legend>
+                <legend>Información del partido</legend>
                 <label for="codigo">
-                    Código de unidad:
+                    Código de encuentro:
                 </label>
                 <input type="text"
                        id="codigo"
                        name="codigo"
-                       placeholder="BUS-001"
+                       placeholder="J01-001"
                        maxlength="10"
                        required>
                 <br><br>
                 <label for="responsable">
-                    Conductor asignado:
+                    Analista o jugador asignado:
                 </label>
                 <select id="responsable"
                         name="responsable"
                         required>
                     <option value="">
-                        Selecciona un conductor
+                        Selecciona una opción
                     </option>
                     <option value="juan">
-                        Juan Pérez
+                        Moisés Caicedo
                     </option>
                     <option value="maria">
-                        María López
+                        Piero Hincapié
                     </option>
                     <option value="carlos">
-                        Carlos Gómez
+                        Enner Valencia
                     </option>
                 </select>
                 <br><br>
                 <label for="planeta">
-                    Estación de destino:
+                    Estadio o sede:
                 </label>
                 <input type="text"
                        id="planeta"
                        name="planeta"
-                       placeholder="Ej. Terminal Norte"
+                       placeholder="Ej. Estadio Rodrigo Paz Delgado"
                        required>
                 <br><br>
                 <label for="fecha">
-                    Fecha del recorrido:
+                    Fecha del partido:
                 </label>
                 <input type="date"
                        id="fecha"
@@ -67,28 +67,28 @@
             </fieldset>
             <br>
             <fieldset>
-                <legend>Características</legend>
-                <p>Prioridad del servicio:</p>
+                <legend>Métricas y características</legend>
+                <p>Relevancia del encuentro:</p>
                 <input type="radio"
                        id="alta"
                        name="prioridad"
                        value="alta"
                        required>
-                <label for="alta">Alta</label>
+                <label for="alta">Alta (Clásico / Final)</label>
                 <input type="radio"
                        id="media"
                        name="prioridad"
                        value="media">
 
-                <label for="media">Media</label>
+                <label for="media">Media (Fase regular)</label>
                 <input type="radio"
                        id="baja"
                        name="prioridad"
                        value="baja">
-                <label for="baja">Baja</label>
+                <label for="baja">Baja (Amistoso)</label>
                 <br><br>
                 <label for="riesgo">
-                    Nivel de tráfico (1 a 10):
+                    Intensidad del partido (1 a 10):
                 </label>
                 <input type="number"
                        id="riesgo"
@@ -96,13 +96,13 @@
                        min="1"
                        max="10"
                        value="5">
-                <p>Equipamiento necesario:</p>
+                <p>Datos estadísticos recopilados:</p>
                 <input type="checkbox"
                        id="nave"
                        name="recursos"
                        value="nave">
                 <label for="nave">
-                    Rastreo GPS
+                    Posesión y pases completados
                 </label>
                 <br>
                 <input type="checkbox"
@@ -110,7 +110,7 @@
                        name="recursos"
                        value="droides">
                 <label for="droides">
-                    Cámaras de seguridad
+                    Tiros al arco y goles esperados (xG)
                 </label>
                 <br>
                 <input type="checkbox"
@@ -118,14 +118,14 @@
                        name="recursos"
                        value="equipo">
                 <label for="equipo">
-                    Sistema de recaudo
+                    Faltas, tarjetas y recuperaciones
                 </label>
             </fieldset>
             <br>
             <fieldset>
-                <legend>Descripción de la ruta</legend>
+                <legend>Resumen estadístico</legend>
                 <label for="descripcion">
-                    Observaciones operativas:
+                    Observaciones del partido:
                 </label>
                 <br>
                 <textarea id="descripcion"
@@ -133,12 +133,12 @@
                           rows="5"
                           cols="45"
                           maxlength="500"
-                          placeholder="Describe el recorrido..."
+                          placeholder="Describe el desarrollo táctico y las estadísticas clave..."
                           required></textarea>
             </fieldset>
             <br>
             <button type="submit">
-                Registrar unidad
+                Registrar estadística
             </button>
             <button type="reset">
                 Limpiar datos
@@ -149,7 +149,7 @@
     <footer>
         <p>
             <small>
-                Gestión de Transporte - 2026
+                Estadísticas de Fútbol - Mateo Mancheno - 2026
             </small>
         </p>
     </footer>

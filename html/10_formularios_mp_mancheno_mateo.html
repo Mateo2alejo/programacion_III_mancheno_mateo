@@ -4,42 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Transporte Público</title>
+    <title>Registro de Estadísticas de Fútbol</title>
 </head>
 
 <body>
-    <h1>Registro de Operadores y Unidades</h1>
+    <h1>Registro de Jugadores y Estadísticas de Partido</h1>
 
     <form action="/registro-transporte" method="post">
         <table>
             <tr>
                 <td>
-                    <label for="nombre_conductor">Nombre del Conductor</label><br>
-                    <input type="text" id="nombre_conductor" name="nombre_conductor" placeholder="Ej. Juan Pérez">
+                    <label for="nombre_conductor">Nombre del Jugador</label><br>
+                    <input type="text" id="nombre_conductor" name="nombre_conductor" placeholder="Ej. Kendry">
                 </td>
                 <td>
-                    <label for="apellido_conductor">Apellido del Conductor</label><br>
-                    <input type="text" id="apellido_conductor" name="apellido_conductor" placeholder="Ej. Gómez">
+                    <label for="apellido_conductor">Apellido del Jugador</label><br>
+                    <input type="text" id="apellido_conductor" name="apellido_conductor" placeholder="Ej. Páez">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="cedula">Número de Cédula / DNI</label><br>
-                    <input type="text" id="cedula" name="cedula" placeholder="1234567890">
+                    <label for="cedula">Número de Dorsal / Camiseta</label><br>
+                    <input type="text" id="cedula" name="cedula" placeholder="10">
                 </td>
                 <td>
-                    <label for="licencia">Tipo de Licencia</label><br>
+                    <label for="licencia">Posición en el Campo</label><br>
                     <select id="licencia" name="licencia" required>
                         <option value="">Selecciona una opción</option>
-                        <option value="tipo_c">Tipo C (Buses pequeños)</option>
-                        <option value="tipo_d">Tipo D (Buses urbanos)</option>
-                        <option value="tipo_e">Tipo E (Articulados / Pesados)</option>
+                        <option value="tipo_c">Delantero / Extremo</option>
+                        <option value="tipo_d">Mediocampista / Volante</option>
+                        <option value="tipo_e">Defensa / Arquero</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="experiencia">Años de Experiencia</label><br>
+                    <label for="experiencia">Partidos Jugados en Temporada</label><br>
                     <input 
                         type="number" 
                         id="experiencia" 
@@ -50,7 +50,7 @@
                     >
                 </td>
                 <td>
-                    <label for="capacidad_bus">Capacidad de la Unidad (pasajeros)</label><br>
+                    <label for="capacidad_bus">Minutos Disputados</label><br>
                     <input 
                         type="number" 
                         id="capacidad_bus" 
@@ -64,25 +64,25 @@
             </tr>
             <tr>
                 <td>
-                    <p>Modalidad de servicio:</p>
+                    <p>Condición de partido:</p>
                     <input type="radio" id="urbano" name="modalidad" value="urbano">
-                    <label for="urbano">Bus Urbano</label>
+                    <label for="urbano">Local</label>
 
                     <input type="radio" id="brt" name="modalidad" value="brt">
-                    <label for="brt">Corredor BRT</label>
+                    <label for="brt">Visitante</label>
 
                     <input type="radio" id="alimentador" name="modalidad" value="alimentador">
-                    <label for="alimentador">Alimentador</label>
+                    <label for="alimentador">Cancha Neutral</label>
                 </td>
                 <td>
-                    <p>Sistemas de seguridad equipados:</p>
+                    <p>Estadísticas registradas:</p>
                     <input 
                         type="checkbox" 
                         id="gps" 
                         name="seguridad" 
                         value="gps"
                     >
-                    <label for="gps">Rastreo GPS</label><br>
+                    <label for="gps">Gol anotado</label><br>
 
                     <input 
                         type="checkbox" 
@@ -90,7 +90,7 @@
                         name="seguridad" 
                         value="camaras"
                     >
-                    <label for="camaras">Cámaras de vigilancia</label><br>
+                    <label for="camaras">Asistencia</label><br>
 
                     <input 
                         type="checkbox" 
@@ -98,44 +98,44 @@
                         name="seguridad" 
                         value="pago_electronico"
                     >
-                    <label for="pago_electronico">Recaudo electrónico</label>
+                    <label for="pago_electronico">Tarjeta amarilla</label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="ruta_asignada">Ruta Asignada</label><br>
+                    <label for="ruta_asignada">Competición / Torneo</label><br>
                     <select id="ruta_asignada" name="ruta_asignada" required>
-                        <option value="">Selecciona una Ruta</option>
-                        <option value="ruta_1">Ruta 1: Norte - Sur</option>
-                        <option value="ruta_2">Ruta 2: Centro - Oriente</option>
-                        <option value="ruta_3">Ruta 3: Circunvalación</option>
+                        <option value="">Selecciona un Torneo</option>
+                        <option value="ruta_1">LigaPro Serie A</option>
+                        <option value="ruta_2">Copa Libertadores</option>
+                        <option value="ruta_3">Eliminatorias Sudamericanas</option>
                     </select>
                 </td>
                 <td>
-                    <label for="turnos">Turnos Disponibles (puedes seleccionar varios)</label><br>
+                    <label for="turnos">Franjas de Tiempo Analizadas (puedes seleccionar varias)</label><br>
                     <select id="turnos" name="turnos" multiple size="3">
-                        <option value="matutino">Matutino (05:00 - 13:00)</option>
-                        <option value="vespertino">Vespertino (13:00 - 21:00)</option>
-                        <option value="nocturno">Nocturno (21:00 - 05:00)</option>
+                        <option value="matutino">Primer Tiempo (0' - 45')</option>
+                        <option value="vespertino">Segundo Tiempo (46' - 90')</option>
+                        <option value="nocturno">Tiempo Adicional / Prórroga</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <fieldset>
-                        <legend>Datos Operativos del Vehículo</legend>
-                        <label for="placa">Número de Placa</label><br>
-                        <input type="text" id="placa" name="placa" placeholder="ABC-1234"><br><br>
+                        <legend>Datos Estadísticos del Encuentro</legend>
+                        <label for="placa">Código de Partido / Marcador</label><br>
+                        <input type="text" id="placa" name="placa" placeholder="J12-LOC2-VIS1"><br><br>
                         
-                        <label for="anio_unidad">Año de Fabricación</label><br>
-                        <input type="number" id="anio_unidad" name="anio_unidad" min="2000" max="2026" value="2020">
+                        <label for="anio_unidad">Temporada / Año</label><br>
+                        <input type="number" id="anio_unidad" name="anio_unidad" min="2000" max="2026" value="2026">
                     </fieldset>
                 </td>
             </tr>
         </table>
 
         <br>
-        <button type="submit">Registrar Unidad</button>
+        <button type="submit">Registrar Estadística</button>
         <button type="reset">Limpiar Formulario</button>
     </form>
 </body>
