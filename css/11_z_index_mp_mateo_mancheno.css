@@ -1,0 +1,33 @@
+.cancha {
+    position: relative;
+    height: 280px;
+}
+
+.tarjeta-metrica {
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.posesion {
+    top: 20px;
+    left: 20px;
+    background-color: #2563EB;
+}
+
+.pases {
+    top: 60px;
+    left: 80px;
+    background-color: #158030;
+    z-index: 2;
+}
+
+.goles {
+    top: 100px;
+    left: 140px;
+    background-color: #DC2626;
+    z-index: 3;
+}

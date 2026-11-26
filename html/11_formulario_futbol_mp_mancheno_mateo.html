@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Registro de estadísticas de fútbol</title>
+</head>
+<body>
+    <header>
+        <h1>Centro de Estadísticas de Fútbol</h1>
+        <p>Registro de partidos y rendimiento por jornada</p>
+    </header>
+    <hr>
+    <main>
+        <form action="#"
+              method="get"
+              id="registro-misiones">
+            <fieldset>
+                <legend>Información del partido</legend>
+                <label for="codigo">
+                    Código de encuentro:
+                </label>
+                <input type="text"
+                       id="codigo"
+                       name="codigo"
+                       placeholder="J01-001"
+                       maxlength="10"
+                       required>
+                <br><br>
+                <label for="responsable">
+                    Analista o jugador asignado:
+                </label>
+                <select id="responsable"
+                        name="responsable"
+                        required>
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+                    <option value="juan">
+                        Moisés Caicedo
+                    </option>
+                    <option value="maria">
+                        Piero Hincapié
+                    </option>
+                    <option value="carlos">
+                        Enner Valencia
+                    </option>
+                </select>
+                <br><br>
+                <label for="planeta">
+                    Estadio o sede:
+                </label>
+                <input type="text"
+                       id="planeta"
+                       name="planeta"
+                       placeholder="Ej. Estadio Rodrigo Paz Delgado"
+                       required>
+                <br><br>
+                <label for="fecha">
+                    Fecha del partido:
+                </label>
+                <input type="date"
+                       id="fecha"
+                       name="fecha"
+                       required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Métricas y características</legend>
+                <p>Relevancia del encuentro:</p>
+                <input type="radio"
+                       id="alta"
+                       name="prioridad"
+                       value="alta"
+                       required>
+                <label for="alta">Alta (Clásico / Final)</label>
+                <input type="radio"
+                       id="media"
+                       name="prioridad"
+                       value="media">
+
+                <label for="media">Media (Fase regular)</label>
+                <input type="radio"
+                       id="baja"
+                       name="prioridad"
+                       value="baja">
+                <label for="baja">Baja (Amistoso)</label>
+                <br><br>
+                <label for="riesgo">
+                    Intensidad del partido (1 a 10):
+                </label>
+                <input type="number"
+                       id="riesgo"
+                       name="riesgo"
+                       min="1"
+                       max="10"
+                       value="5">
+                <p>Datos estadísticos recopilados:</p>
+                <input type="checkbox"
+                       id="nave"
+                       name="recursos"
+                       value="nave">
+                <label for="nave">
+                    Posesión y pases completados
+                </label>
+                <br>
+                <input type="checkbox"
+                       id="droides"
+                       name="recursos"
+                       value="droides">
+                <label for="droides">
+                    Tiros al arco y goles esperados (xG)
+                </label>
+                <br>
+                <input type="checkbox"
+                       id="equipo"
+                       name="recursos"
+                       value="equipo">
+                <label for="equipo">
+                    Faltas, tarjetas y recuperaciones
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Resumen estadístico</legend>
+                <label for="descripcion">
+                    Observaciones del partido:
+                </label>
+                <br>
+                <textarea id="descripcion"
+                          name="descripcion"
+                          rows="5"
+                          cols="45"
+                          maxlength="500"
+                          placeholder="Describe el desarrollo táctico y las estadísticas clave..."
+                          required></textarea>
+            </fieldset>
+            <br>
+            <button type="submit">
+                Registrar estadística
+            </button>
+            <button type="reset">
+                Limpiar datos
+            </button>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <p>
+            <small>
+                Estadísticas de Fútbol - Mateo Mancheno - 2026
+            </small>
+        </p>
+    </footer>
+</body>
+</html>

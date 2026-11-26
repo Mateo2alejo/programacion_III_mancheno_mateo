@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Arreglo - Estadísticas de Fútbol - Mateo Mancheno</title>
+    <script src="06_crud_arreglo_mp_mateo_mancheno.js" defer></script>
+</head>
+<body>
+    <h1>Registro de Estadísticas de Fútbol</h1>
+    <h2 id="tituloFormulario">Registro de Jugador</h2>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre del jugador">
+        <select id="torneo">
+            <option value="LigaPro Serie A">LigaPro Serie A</option>
+            <option value="Copa Libertadores">Copa Libertadores</option>
+            <option value="Eliminatorias Sudamericanas">Eliminatorias Sudamericanas</option>
+        </select>
+        <select id="estado">
+            <option value="Titular">Titular</option>
+            <option value="Suplente">Suplente</option>
+            <option value="Lesionado">Lesionado</option>
+        </select>
+        <button type="submit" id="guardar">Agregar</button>
+        <button type="button" id="cancelar" hidden>Cancelar</button>
+    </form>
+    <h2>Jugadores Registrados</h2>
+    <h2 id="cantidad">Cantidad</h2>
+    <div id="contenedor"></div>
+</body>
+</html>
